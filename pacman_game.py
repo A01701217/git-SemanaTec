@@ -14,8 +14,8 @@ from turtle import *
 
 from freegames import floor, vector
 
-state = {'score': 0}
-path = Turtle(visible=False)
+state = {'score': 0} #Se guarda el valor para la puntuación
+path = Turtle(visible=False) 
 writer = Turtle(visible=False)
 aim = vector(5, 0)
 pacman = vector(-40, -80)

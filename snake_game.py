@@ -13,24 +13,39 @@ from turtle import *
 
 from freegames import square, vector
 
+import random
+
 food = vector(0, 0)
 snake = [vector(10, 0)]
 aim = vector(0, -10)
-
 
 def change(x, y):
     """Change snake direction."""
     aim.x = x
     aim.y = y
 
-
 def inside(head):
     """Return True if head inside boundaries."""
     return -200 < head.x < 190 and -200 < head.y < 190
 
+def cambiarcolor():
+    numero_aleatorio = random.randint(1, 5) #Generamos un numero aleatorio que representara un color
+    #Los colores se eligen
+    if numero_aleatorio == 1:
+        colorserp = 'black'
+    elif numero_aleatorio == 2:
+        colorserp = 'pink'
+    elif numero_aleatorio == 3:
+        colorserp = 'blue'
+    elif numero_aleatorio == 4:
+        colorserp = 'lime'
+    elif numero_aleatorio == 5:
+        colorserp = 'purple'
+    return colorserp
+
+colores = cambiarcolor()  # Genera un color aleatorio único al comienzo del juego
 
 def move():
-    """Move snake forward one segment."""
     head = snake[-1].copy()
     head.move(aim)
 
@@ -51,12 +66,10 @@ def move():
     clear()
 
     for body in snake:
-        square(body.x, body.y, 9, 'black')
-
+        square(body.x, body.y, 9, colores)  # Utiliza el color aleatorio generado
     square(food.x, food.y, 9, 'green')
     update()
     ontimer(move, 100)
-
 
 setup(420, 420, 370, 0)
 hideturtle()

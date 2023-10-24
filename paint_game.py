@@ -79,6 +79,8 @@ onkey(lambda: color('white'), 'W')  # Cambia el color a blanco con la tecla 'W'
 onkey(lambda: color('green'), 'G')  # Cambia el color a verde con la tecla 'G'
 onkey(lambda: color('blue'), 'B')    # Cambia el color a azul con la tecla 'B'
 onkey(lambda: color('red'), 'R')     # Cambia el color a rojo con la tecla 'R'
+onkey(lambda: color('purple'), 'P')     # Cambia el color a morado con la tecla 'P'
+onkey(lambda: color('lime'), 'L')     # Cambia el color a lima con la tecla 'L'
 onkey(lambda: store('shape', line), 'l')        # Se indica que se dibujaran lineass
 onkey(lambda: store('shape', square), 's')      # Se indica que se dibujaran cuadrados
 onkey(lambda: store('shape', circle), 'c')      # Se indica que se dibujaran circulos

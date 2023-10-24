@@ -34,9 +34,15 @@ def square(start, end):
     end_fill() #Rellena la figura dibujada
 
 
-def circle(start, end):
+def circle_f(start, end):
     """Draw circle from start to end."""
-    pass  # TODO
+    radius = (end.x - start.x) / 2 #Obtenemos el radio para usar la funcion circle() de turtle
+    up() #No dibuja
+    goto(start.x, start.y) #Mover a posicion inicial
+    down()#dibuja
+    begin_fill()  #Se indica que una figura siendo dibujada se rellenara
+    circle(radius) #Se dibuja un circulo
+    end_fill() #Rellena la figura dibujada
 
 
 def rectangle(start, end):
@@ -83,7 +89,7 @@ onkey(lambda: color('purple'), 'P')     # Cambia el color a morado con la tecla 
 onkey(lambda: color('lime'), 'L')     # Cambia el color a lima con la tecla 'L'
 onkey(lambda: store('shape', line), 'l')        # Se indica que se dibujaran lineass
 onkey(lambda: store('shape', square), 's')      # Se indica que se dibujaran cuadrados
-onkey(lambda: store('shape', circle), 'c')      # Se indica que se dibujaran circulos
+onkey(lambda: store('shape', circle_f), 'c')      # Se indica que se dibujaran circulos
 onkey(lambda: store('shape', rectangle), 'r')   # Se indica que se dibujaran rectangulos
 onkey(lambda: store('shape', triangle), 't')    # Se indica que se dibujaran triangulos
 

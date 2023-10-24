@@ -14,11 +14,11 @@ from turtle import *
 
 from freegames import floor, vector
 
-state = {'score': 0} #Se guarda el valor para la puntuación
-path = Turtle(visible=False) 
-writer = Turtle(visible=False)
-aim = vector(5, 0)
-pacman = vector(-40, -80)
+state = {'score': 0} #Seguimiento puntuacion juego
+path = Turtle(visible=False) #
+writer = Turtle(visible=False)#Puntuacion del juego
+aim = vector(5, 10) 
+pacman = vector(-40, -80) #Posicion en la que se encuentra pacman
 ghosts = [
     [vector(-180, 160), vector(5, 0)],
     [vector(-180, -160), vector(0, 5)],

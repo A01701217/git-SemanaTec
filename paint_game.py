@@ -10,30 +10,28 @@ Exercises
 """
 
 from turtle import *
-
 from freegames import vector
 
-
+# Funcion para dibujar una linea desde start hasta end
 def line(start, end):
-    """Draw line from start to end."""
-    up()
-    goto(start.x, start.y)
-    down()
-    goto(end.x, end.y)
+    up()              # No dibuja
+    goto(start.x, start.y)  # Mover a la posición inicial
+    down()            # Dibuja
+    goto(end.x, end.y)      # Movera la posición final
 
-
+#Funcion para dibujar un cuadrado de area (lado*4)
 def square(start, end):
     """Draw square from start to end."""
-    up()
-    goto(start.x, start.y)
-    down()
-    begin_fill()
+    up() #No dibuja
+    goto(start.x, start.y) #Mover a posicion inicial
+    down() #dibuja
+    begin_fill() #Se indica que una figura siendo dibujada se rellenara
 
-    for count in range(4):
+    for count in range(4): #Se realiza una linea 4 veces volteando siempre a la izquierda para realizar el cuadrado
         forward(end.x - start.x)
         left(90)
 
-    end_fill()
+    end_fill() #Rellena la figura dibujada
 
 
 def circle(start, end):
@@ -50,38 +48,41 @@ def triangle(start, end):
     """Draw triangle from start to end."""
     pass  # TODO
 
-
+# Funcion para guardar punto de inicio e indicar la figura a dibujar
 def tap(x, y):
-    """Store starting point or draw shape."""
-    start = state['start']
+    start = state['start']  # Obtiene el punto inicio
 
-    if start is None:
-        state['start'] = vector(x, y)
+    if start is None:       # No existe punto incio
+        state['start'] = vector(x, y)  # Almacena punto de inicio
     else:
-        shape = state['shape']
-        end = vector(x, y)
-        shape(start, end)
-        state['start'] = None
+        shape = state['shape']  # Figura a dibujar
+        end = vector(x, y)      # Donde termina la figura
+        shape(start, end)       # Dibuja la forma  punto inicio y punto final
+        state['start'] = None  # Reinicia punto inicio
 
-
+# Definir una función "store" para almacenar un valor en el estado con una clave
 def store(key, value):
-    """Store value in state at key."""
-    state[key] = value
+    state[key] = value  # Almacena el valor de estado
 
+state = {'start': None, 'shape': line} # El estado inicial no existe y de default esta el dibujo con lineas
 
-state = {'start': None, 'shape': line}
-setup(420, 420, 370, 0)
-onscreenclick(tap)
+setup(420, 420, 370, 0) # Tamaño del canva
+
+onscreenclick(tap) # Asocia "tap" con clicks en la pantalla
+
 listen()
-onkey(undo, 'u')
-onkey(lambda: color('black'), 'K')
-onkey(lambda: color('white'), 'W')
-onkey(lambda: color('green'), 'G')
-onkey(lambda: color('blue'), 'B')
-onkey(lambda: color('red'), 'R')
-onkey(lambda: store('shape', line), 'l')
-onkey(lambda: store('shape', square), 's')
-onkey(lambda: store('shape', circle), 'c')
-onkey(lambda: store('shape', rectangle), 'r')
-onkey(lambda: store('shape', triangle), 't')
-done()
+
+# Configura atajos de teclado para diferentes acciones
+onkey(undo, 'u')                # Deshacer accion con u
+onkey(lambda: color('black'), 'K')  # Cambia el color a negro con la tecla 'K'
+onkey(lambda: color('white'), 'W')  # Cambia el color a blanco con la tecla 'W'
+onkey(lambda: color('green'), 'G')  # Cambia el color a verde con la tecla 'G'
+onkey(lambda: color('blue'), 'B')    # Cambia el color a azul con la tecla 'B'
+onkey(lambda: color('red'), 'R')     # Cambia el color a rojo con la tecla 'R'
+onkey(lambda: store('shape', line), 'l')        # Se indica que se dibujaran lineass
+onkey(lambda: store('shape', square), 's')      # Se indica que se dibujaran cuadrados
+onkey(lambda: store('shape', circle), 'c')      # Se indica que se dibujaran circulos
+onkey(lambda: store('shape', rectangle), 'r')   # Se indica que se dibujaran rectangulos
+onkey(lambda: store('shape', triangle), 't')    # Se indica que se dibujaran triangulos
+
+done() #Se termina congiguración

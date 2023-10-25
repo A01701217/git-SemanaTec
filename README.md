@@ -3,9 +3,9 @@ Actividad 1:
 
 Uno de los dos añadirá las siguientes funcionalidades:(Pedro Emiliano Sanciprian Rodríguez/A01782190) 
 
-      *Un color nuevo 
+      *Un color nuevo ✔️
       
-      *Dibujar un círculo 
+      *Dibujar un círculo ✔️
       
 El otro compañero añadirá: (Joako)
 
@@ -23,17 +23,17 @@ Uno de los dos hará que: (Joako)
           
 El otro compañero deberá hacer que: (Pedro Emiliano Sanciprian Rodríguez/A01782190)
 
-          *Cada vez que se corra el juego, la víbora y la comida deberán tener colores diferentes entre sí, pero al azar, de una serie de 5 diferentes colores, excepto el rojo.
+          *Cada vez que se corra el juego, la víbora y la comida deberán tener colores diferentes entre sí, pero al azar, de una serie de 5 diferentes colores, excepto el rojo. ✔️
 
 
 Actividad 3:
 
-Uno de los dos hará que: (Pedro Emiliano Sanciprian Rodríguez
+Uno de los dos hará que: 
 
           *Los fantasmas sean más listos
-El otro compañero deberá de: (Joako)
+El otro compañero deberá de: (Pedro Emiliano Sanciprian Rodríguez/A01782190)
 
-          *Cambiar el tablero
+          *Cambiar el tablero ✔️
           *Hacer que los fantasmas vayan mas rápido
 
 Actividad 4:

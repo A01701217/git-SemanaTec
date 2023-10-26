@@ -41,7 +41,7 @@ Actividad 4:
 Uno de los dos hará que:(Joako)
 
           *La velocidad del movimiento para el proyectil y los balones sea más rápida✔️
-El otro compañero deberá de:
+El otro compañero deberá de: (Pedro Emiliano Sanciprian Rodríguez/A01782190) 
 
           *Hacer que el juego nunca termine, de manera que los balones al salir de la ventana se re posicionen.
 
@@ -51,5 +51,5 @@ Entre ambos deberán de repartirse los siguientes cambios:
 
           *Contar y desplegar el numero de taps (joako)✔️     
           *Detectar cuando todos los cuadros se han destapado(Joako)✔️
-          *Central el dígito en el cuadro
-          *Como un condimento de innovación al juego, Podrías utilizar algo diferente a los dígitos para resolver el juego y que al usuario le ayude a tener mejor memoria ?
+          *Centrar el dígito en el cuadro (Pedro Emiliano Sanciprian Rodríguez/A01782190) 
+          *Como un condimento de innovación al juego, Podrías utilizar algo diferente a los dígitos para resolver el juego y que al usuario le ayude a tener mejor memoria ? (Pedro Emiliano Sanciprian Rodríguez/A01782190) 

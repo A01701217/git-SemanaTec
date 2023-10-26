@@ -23,8 +23,8 @@ def tap(x, y):
     if not inside(ball):
         ball.x = -199
         ball.y = -199
-        speed.x = (x + 200) / 25
-        speed.y = (y + 200) / 25
+        speed.x = (x + 200) / 10 #Aqui cambiamos la velocidad de los proyectiles antes se dividia entre 25 ahora entre 10
+        speed.y = (y + 200) / 10#Aqui cambiamos la velocidad de los proyectiles
 
 
 def inside(xy):
@@ -55,10 +55,10 @@ def move():
         targets.append(target)
 
     for target in targets:
-        target.x -= 0.5
+        target.x -= 3.5 #aqui cambiamos la velocidad de los targets.
 
     if inside(ball):
-        speed.y -= 0.35
+        speed.y -= .35
         ball.move(speed)
 
     dupe = targets.copy()

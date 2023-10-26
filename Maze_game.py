@@ -7,34 +7,27 @@ path = Turtle(visible=False) #
 aim = vector(5, 0) #Dirección inicial a la que se dirigira pacman
 pacman = vector(-40, -80) #Posicion en la que inicia pacman
 
-#Posicion inicial de los fantasmas y direccion a la que se dirigen
-ghosts = [
-    [vector(-180, 160), vector(5, 0)],
-    [vector(-180, -160), vector(0, 5)],
-    [vector(100, 160), vector(0, -5)],
-    [vector(100, -160), vector(-5, 0)],
-]
 # fmt: off
 #Tablero, indicandonos las partes que tendran vacio, puntos o pared
 tiles = [
     0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-    0, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0,
-    0, 1, 0, 0, 1, 0, 0, 1, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0,
-    0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0,
-    0, 1, 0, 0, 0, 1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0,
-    0, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 0, 0, 0, 0,
-    0, 0, 0, 0, 1, 0, 0, 1, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0,
-    0, 0, 0, 0, 1, 0, 1, 1, 1, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0,
-    0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0,
-    0, 1, 0, 0, 1, 0, 1, 1, 1, 1, 1, 0, 1, 0, 0, 1, 0, 0, 0, 0,
-    0, 1, 0, 0, 1, 0, 1, 0, 0, 0, 1, 0, 1, 0, 0, 1, 0, 0, 0, 0,
-    0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0,
-    0, 1, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0,
-    0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 0, 0, 0,
-    0, 0, 1, 0, 1, 0, 1, 0, 0, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0,
-    0, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 0, 0, 0, 0,
-    0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0,
-    0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0,
+    0, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 2, 0, 0,
+    0, 1, 2, 2, 1, 2, 2, 1, 2, 1, 2, 2, 1, 2, 2, 1, 1, 2, 0, 0,
+    0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 0, 0,
+    0, 1, 2, 2, 2, 1, 2, 1, 2, 1, 2, 1, 2, 2, 2, 1, 1, 2, 0, 0,
+    0, 1, 1, 1, 1, 2, 1, 1, 2, 1, 1, 2, 1, 1, 1, 1, 1, 2, 0, 0,
+    0, 2, 2, 2, 1, 2, 2, 1, 2, 1, 2, 2, 1, 2, 2, 2, 1, 2, 0, 0,
+    0, 2, 2, 2, 1, 2, 1, 1, 1, 1, 1, 2, 1, 2, 2, 2, 1, 2, 0, 0,
+    0, 1, 1, 1, 1, 1, 1, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 2, 0, 0,
+    0, 1, 2, 2, 1, 2, 1, 1, 1, 1, 1, 2, 1, 2, 2, 1, 1, 2, 0, 0,
+    0, 1, 2, 2, 1, 2, 1, 2, 2, 2, 1, 2, 1, 2, 2, 1, 1, 2, 0, 0,
+    0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 0, 0,
+    0, 1, 2, 2, 1, 2, 2, 2, 1, 2, 2, 2, 1, 2, 2, 1, 1, 2, 0, 0,
+    0, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 2, 0, 0,
+    0, 2, 1, 2, 1, 2, 1, 2, 2, 2, 1, 2, 1, 2, 1, 2, 1, 2, 0, 0,
+    0, 1, 1, 1, 1, 2, 1, 1, 2, 1, 1, 2, 1, 1, 1, 1, 1, 2, 0, 0,
+    0, 1, 2, 1, 2, 2, 2, 2, 1, 2, 2, 2, 2, 1, 2, 1, 1, 2, 0, 0,
+    0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 0, 0,
     0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
     0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
 ]
@@ -53,6 +46,7 @@ def square(x, y): #Dibujado de las casillas
         path.left(90)
 
     path.end_fill() #Se rellena la figura
+  
 
 
 def offset(point): #Se convierten coordenadas en un indice
@@ -81,7 +75,7 @@ def valid(point): #Esta funcion nos indicara si la casilla es para poder estar e
 def world(): #Se ilustra como luciria el mundo pacman
     """Draw world using path."""
     bgcolor('black') #Color de fondo
-    path.color('blue') #Color del camino caminable
+    #path.color('blue') #Color del camino caminable
 
     for index in range(len(tiles)):
         tile = tiles[index]
@@ -90,11 +84,14 @@ def world(): #Se ilustra como luciria el mundo pacman
             x = (index % 20) * 20 - 200
             y = 180 - (index // 20) * 20
             square(x, y)
+            if tile == 1:
+              path.color('red')
+            elif tile == 2:
+              path.color('orange')
 
 
 def move():
-    """Move pacman and all ghosts."""
-
+    """Move pacman."""
 
     clear() #Refrescamiento de la pantalla
 
@@ -103,46 +100,10 @@ def move():
 
     index = offset(pacman) #Se ubica en donde se encuentra pacman y actualiza el estado
 
-    if tiles[index] == 1: #Condicional para poder actualizar el estado del tile tras comerse una bolita
-        tiles[index] = 2 #Se actualiza el valor del tile
-        x = (index % 20) * 20 - 200 
-        y = 180 - (index // 20) * 20
-        square(x, y)
-
     up() #Dibujado de la esferita que representa a patman
     goto(pacman.x + 10, pacman.y + 10) #Posicion del centro de pacman
     dot(20, 'yellow') #tamaño y color de pacman
 
-    for point, course in ghosts: #Accionar de cada uno de los fantasmas
-        if valid(point + course): #Se verifica si el fantasma va a una posicion correcta
-            point.move(course)
-        else:
-            options = [ #Movimientos de los fantasmas
-                vector(15, 0),
-                vector(-15, 0),
-                vector(0, 15),
-                vector(0, -15),
-            ]
-            dis = pacman- point
-            if (dis.x>0 and dis.y>0) and (valid(point+vector(10, 0)) or valid(point+vector(0, 10))):
-                options = [
-                    vector(15, 0),
-                    vector(0, 15),
-                ] 
-            plan = choice(options) #Se elige una de las distintas acciones para ejecutar
-            course.x = plan.x
-            course.y = plan.y
-
-        up() #posicion y modelo de los fantasmas
-        goto(point.x + 10, point.y + 10)
-        dot(20, 'green')
-
-    update() #Se refresca toda la pagina
-
-    for point, course in ghosts:
-        if abs(pacman - point) < 20: #Si pacman colisiona con un fantasma
-            return #Un return que detiene el juego por completo 
-            #print("uwu")
 
     ontimer(move, 100)
 
@@ -157,6 +118,7 @@ def change(x, y): #Cambio de direcciones de pacman
 setup(420, 420, 370, 0) #Se dan los parametros de la figura
 hideturtle() #No se muestra la tortuga en el canva
 tracer(False) #Hace que todo se muestre automaticamente en lugar de tener que esperar a que se realice uno a uno
+
 #Asignacion de teclas
 listen() 
 onkey(lambda: change(5, 0), 'Right')

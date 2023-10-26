@@ -19,7 +19,7 @@ Actividad 2:
 
 Uno de los dos hará que: (Joako)
 
-          *La comida podrá moverse al azar un paso a la vez y no deberá de salirse de la ventana
+          *La comida podrá moverse al azar un paso a la vez y no deberá de salirse de la ventana✔️
           
 El otro compañero deberá hacer que: (Pedro Emiliano Sanciprian Rodríguez/A01782190)
 
@@ -38,7 +38,7 @@ El otro compañero deberá de: (Pedro Emiliano Sanciprian Rodríguez/A01782190)
 
 Actividad 4:
 
-Uno de los dos hará que:
+Uno de los dos hará que:(Joako)
 
           *La velocidad del movimiento para el proyectil y los balones sea más rápida
 El otro compañero deberá de:
@@ -49,7 +49,7 @@ Actividad 5:
 
 Entre ambos deberán de repartirse los siguientes cambios:
 
-          *Contar y desplegar el numero de taps
-          *Detectar cuando todos los cuadros se han destapado
+          *Contar y desplegar el numero de taps (joako)
+          *Detectar cuando todos los cuadros se han destapado(Joako)
           *Central el dígito en el cuadro
           *Como un condimento de innovación al juego, Podrías utilizar algo diferente a los dígitos para resolver el juego y que al usuario le ayude a tener mejor memoria ?

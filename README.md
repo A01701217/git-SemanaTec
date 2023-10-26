@@ -28,9 +28,9 @@ El otro compañero deberá hacer que: (Pedro Emiliano Sanciprian Rodríguez/A017
 
 Actividad 3:
 
-Uno de los dos hará que: 
+Uno de los dos hará que: (Joako)
 
-          *Los fantasmas sean más listos
+          *Los fantasmas sean más listos✔️
 El otro compañero deberá de: (Pedro Emiliano Sanciprian Rodríguez/A01782190)
 
           *Cambiar el tablero ✔️

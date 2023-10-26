@@ -13,11 +13,14 @@ from random import *
 from turtle import *
 
 from freegames import path
+from freegames import square, vector
 
 car = path('car.gif')
 tiles = list(range(32)) * 2
 state = {'mark': None}
 hide = [True] * 64
+count= vector(0,0) #Contador par el numero de taps.
+WINNER = [False] # esto nos va a indicar si ya gano el jugador 
 
 
 def square(x, y):
@@ -55,6 +58,10 @@ def tap(x, y):
         hide[mark] = False
         state['mark'] = None
 
+    # se agrega una al contador y se muestra para ver las veces que se piico el programa
+    count.x += 1
+    print("number of taps: " + str(count.x))
+
 
 def draw():
     """Draw image and tiles."""
@@ -76,6 +83,10 @@ def draw():
         goto(x + 2, y)
         color('black')
         write(tiles[mark], font=('Arial', 30, 'normal'))
+        if not any(hide): #if para checar la condicion de si gano el jugador 
+            if not WINNER[0]:
+                print("You WON the game in " + str(count.x) + "taps")
+                WINNER[0] = True
 
     update()
     ontimer(draw, 100)

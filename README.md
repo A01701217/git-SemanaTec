@@ -50,6 +50,6 @@ Actividad 5:
 Entre ambos deberán de repartirse los siguientes cambios:
 
           *Contar y desplegar el numero de taps (joako)✔️     
-          *Detectar cuando todos los cuadros se han destapado(Joako)
+          *Detectar cuando todos los cuadros se han destapado(Joako)✔️
           *Central el dígito en el cuadro
           *Como un condimento de innovación al juego, Podrías utilizar algo diferente a los dígitos para resolver el juego y que al usuario le ayude a tener mejor memoria ?

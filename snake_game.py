@@ -18,6 +18,7 @@ import random
 food = vector(0, 0)
 snake = [vector(10, 0)]
 aim = vector(0, -10)
+count = vector(0,0)
 
 def change(x, y):
     """Change snake direction."""
@@ -64,6 +65,21 @@ def move():
         snake.pop(0)
 
     clear()
+    if count.x % 2 == 0:
+        if -200 < food.x < 190:
+            food.x += randrange(-1, 2) * 10
+        elif food.x == -200:
+            food.x += 50
+        elif food.x == 190:
+            food.x -= 50
+
+        if -200 < food.y < 190:
+            food.y += randrange(-1, 2) * 10
+        elif food.y == -200:
+            food.y += 50
+        elif food.y == 190:
+            food.y -= 50
+
 
     for body in snake:
         square(body.x, body.y, 9, colores)  # Utiliza el color aleatorio generado

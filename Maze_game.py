@@ -3,9 +3,7 @@ from turtle import *
 
 from freegames import floor, vector
 
-state = {'score': 0} #Seguimiento puntuacion juego
 path = Turtle(visible=False) #
-writer = Turtle(visible=False)#Puntuacion del juego
 aim = vector(5, 0) #Dirección inicial a la que se dirigira pacman
 pacman = vector(-40, -80) #Posicion en la que inicia pacman
 
@@ -93,16 +91,10 @@ def world(): #Se ilustra como luciria el mundo pacman
             y = 180 - (index // 20) * 20
             square(x, y)
 
-            if tile == 1: #Condición para poner los puntitos de comida
-                path.up()
-                path.goto(x + 10, y + 10)
-                path.dot(5, 'white')
-
 
 def move():
     """Move pacman and all ghosts."""
-    writer.undo() #Se borra el estado anterior de la puntuación
-    writer.write(state['score']) #Se actualiza la puntuación
+
 
     clear() #Refrescamiento de la pantalla
 
@@ -113,7 +105,6 @@ def move():
 
     if tiles[index] == 1: #Condicional para poder actualizar el estado del tile tras comerse una bolita
         tiles[index] = 2 #Se actualiza el valor del tile
-        state['score'] += 1 #Se suma la puntuacion
         x = (index % 20) * 20 - 200 
         y = 180 - (index // 20) * 20
         square(x, y)
@@ -166,9 +157,6 @@ def change(x, y): #Cambio de direcciones de pacman
 setup(420, 420, 370, 0) #Se dan los parametros de la figura
 hideturtle() #No se muestra la tortuga en el canva
 tracer(False) #Hace que todo se muestre automaticamente en lugar de tener que esperar a que se realice uno a uno
-writer.goto(160, 160) #Posicion del score
-writer.color('white') #Color del score
-writer.write(state['score']) #que muestra el score
 #Asignacion de teclas
 listen() 
 onkey(lambda: change(5, 0), 'Right')

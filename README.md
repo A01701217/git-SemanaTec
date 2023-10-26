@@ -9,9 +9,9 @@ Uno de los dos añadirá las siguientes funcionalidades:(Pedro Emiliano Sancipri
       
 El otro compañero añadirá: (Joako)
 
-      *Completar el rectángulo
+      *Completar el rectángulo ✔️
       
-      *Completar el triángulo
+      *Completar el triángulo ✔️
       
 
 
@@ -34,7 +34,7 @@ Uno de los dos hará que:
 El otro compañero deberá de: (Pedro Emiliano Sanciprian Rodríguez/A01782190)
 
           *Cambiar el tablero ✔️
-          *Hacer que los fantasmas vayan mas rápido
+          *Hacer que los fantasmas vayan mas rápido ✔️
 
 Actividad 4:
 

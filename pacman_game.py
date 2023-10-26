@@ -143,6 +143,12 @@ def move():
                 vector(0, 15),
                 vector(0, -15),
             ]
+            dis = pacman- point
+            if (dis.x>0 and dis.y>0) and (valid(point+vector(10, 0)) or valid(point+vector(0, 10))):
+                options = [
+                    vector(15, 0),
+                    vector(0, 15),
+                ] 
             plan = choice(options) #Se elige una de las distintas acciones para ejecutar
             course.x = plan.x
             course.y = plan.y

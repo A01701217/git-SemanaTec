@@ -138,10 +138,10 @@ def move():
             point.move(course)
         else:
             options = [ #Movimientos de los fantasmas
-                vector(5, 0),
-                vector(-5, 0),
-                vector(0, 5),
-                vector(0, -5),
+                vector(15, 0),
+                vector(-15, 0),
+                vector(0, 15),
+                vector(0, -15),
             ]
             plan = choice(options) #Se elige una de las distintas acciones para ejecutar
             course.x = plan.x

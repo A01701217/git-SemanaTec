@@ -43,7 +43,7 @@ Uno de los dos hará que:(Joako)
           *La velocidad del movimiento para el proyectil y los balones sea más rápida✔️
 El otro compañero deberá de: (Pedro Emiliano Sanciprian Rodríguez/A01782190) 
 
-          *Hacer que el juego nunca termine, de manera que los balones al salir de la ventana se re posicionen.
+          *Hacer que el juego nunca termine, de manera que los balones al salir de la ventana se re posicionen. ✔️
 
 Actividad 5:
 

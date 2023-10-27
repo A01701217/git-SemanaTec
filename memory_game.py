@@ -80,7 +80,7 @@ def draw():
     if mark is not None and hide[mark]: #Al abrir un cuadrito se displayea el juego
         x, y = xy(mark)
         up()
-        goto(x + 2, y)
+        goto(x+10, y)  # Agrega un desplazamiento para centrar el número
         color('black')
         write(tiles[mark], font=('Arial', 30, 'normal'))
         if not any(hide): #if para checar la condicion de si gano el jugador 

@@ -61,18 +61,20 @@ def move():
         speed.y -= .35
         ball.move(speed)
 
-    dupe = targets.copy()  #copiar lista de targets
-    targets.clear() #Se vacia la lista
+    dupe = targets.copy() #Copiar lista de objetivos
+    targets.clear() #Vaciar lista de objetivos
 
     for target in dupe: #Distancia entre pelota y objetivo
         if abs(target - ball) > 13:
-            targets.append(target) #Si la distancia es mayor a 13 el target se mantiene
+            targets.append(target)
 
-    draw() #Se dibujan targets y pelotita
+    draw()
 
-    for target in targets: #Si el target llega al final entonces se termina el juego
+    for target in targets: #Detectar si objetivo se salio de los limites
         if not inside(target):
-            return
+            target.x +=400 #Ahora en lugar de terminar simplemente se rerecorre el objetivo
+            #targets.remove(target)
+            #return
 
     ontimer(move, 50)
 

@@ -64,8 +64,7 @@ def valid(point): #Esta funcion nos indicara si la casilla es para poder estar e
     """Return True if point is valid in tiles."""
     index = offset(point) #Se revisa la validez de la casilla
 
-    if tiles[index] == 3: #La casilla es una pared
-        print("you win")
+   
 
     if tiles[index] == 0: #La casilla es una pared
         return False
@@ -106,9 +105,17 @@ def move():
     if valid(pacman + aim): #Se verifica si la posicion a la que se intenta mover es valida
         pacman.move(aim) #Se mueve a pacman de posicion a donde se pretende
     else:
+        print("):  !!!!You lose!!! :(") #termina el juego si chocas contra la pared-
         return
-
+    
     index = offset(pacman) #Se ubica en donde se encuentra pacman y actualiza el estado
+
+    if tiles[index] == 3: #Condicional para terminar el juego si se llega a la meta
+        print("(;  !!!!you won!!!!!! ;)")
+        return
+        
+
+    
 
     up() #Dibujado de la esferita que representa a patman
     goto(pacman.x + 10, pacman.y + 10) #Posicion del centro de pacman

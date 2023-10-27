@@ -58,9 +58,9 @@ def tap(x, y): #Deteccion de cuando se da click en la pantalla
         hide[mark] = False
         state['mark'] = None
 
-    # se agrega una al contador y se muestra para ver las veces que se piico el programa
+   
     count.x += 1
-    print("number of taps: " + str(count.x))
+    print("number of taps: " + str(count.x)) # se agrega una al contador y se muestra para ver las veces que se piico el programa
 
 
 def draw():

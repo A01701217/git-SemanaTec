@@ -52,4 +52,4 @@ Entre ambos deberán de repartirse los siguientes cambios:
           *Contar y desplegar el numero de taps (joako)✔️     
           *Detectar cuando todos los cuadros se han destapado(Joako)✔️
           *Centrar el dígito en el cuadro (Pedro Emiliano Sanciprian Rodríguez/A01782190)  ✔️
-          *Como un condimento de innovación al juego, Podrías utilizar algo diferente a los dígitos para resolver el juego y que al usuario le ayude a tener mejor memoria ? (Pedro Emiliano Sanciprian Rodríguez/A01782190) 
+          *Como un condimento de innovación al juego, Podrías utilizar algo diferente a los dígitos para resolver el juego y que al usuario le ayude a tener mejor memoria ? (Pedro Emiliano Sanciprian Rodríguez/A01782190) ✔️

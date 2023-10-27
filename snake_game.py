@@ -15,9 +15,9 @@ from freegames import square, vector
 
 import random
 
-food = vector(0, 0)
-snake = [vector(10, 0)]
-aim = vector(0, -10)
+food = vector(0, 0) #Posicion inicial de la comida
+snake = [vector(10, 0)] #Posicion inicial de la serpiente
+aim = vector(0, -10) #Direccion inicial a la que se dirige la serpiente
 count = vector(0,0)
 
 def change(x, y):
